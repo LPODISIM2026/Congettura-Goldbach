@@ -3,7 +3,16 @@ package it.univaq.disim.hello;
 import java.time.Duration;
 import java.time.Instant;
 
+/**
+ * 
+ */
 public class SupportoLPONumeri26 {
+	/**
+	 * Il metodo, dato un numero intero a, verifica se è primo o no.
+	 * @param a il numero da verificare
+	 * @return true se è primo, false altrimenti
+	 */
+		
     public static boolean isPrime(int a) {
         if (a <= 1) {
             return false;
@@ -20,7 +29,12 @@ public class SupportoLPONumeri26 {
             }
         return true;
     }
-
+	/**
+	 * Il metodo, dato un numero intero a, verifica se è pari e se è la somma di due numeri primi.
+	 * Per esempio, abbiamo 4 = 2 + 2, 6 = 3 + 3, 8 = 5 + 3, .
+	 * @param a	il numero da verificare
+	 * @return	true se è pari e la somma di due numeri primi, false altrimenti
+	 */
     public static boolean goldbach(int a) {
         if (a <= 2 || a % 2 != 0) {
             return false;
