@@ -8,7 +8,13 @@ Scrivere un programma che, dato un numero intero n, verifica che la congettura √
 
 ## Per compilare
 
-Dalla cartella del progetto, eseguire:
+Dalla cartella del progetto, creare prima la cartella `bin` se non esiste:
+
+```bash
+mkdir -p bin
+```
+
+Poi compilare tutti i sorgenti:
 
 ```bash
 javac -d bin src/it/univaq/disim/hello/*.java
@@ -25,4 +31,23 @@ Esempio:
 java -cp bin it.univaq.disim.hello.RunnerLPO26 100000
 ```
 
+## Per generare la JavaDoc
 
+Dalla cartella del progetto, creare prima la cartella `doc` se non esiste:
+
+```bash
+mkdir -p doc
+```
+
+Poi generare la documentazione:
+
+```bash
+javadoc -d doc -sourcepath src -subpackages it.univaq.disim.hello
+```
+
+La documentazione sar√† disponibile aprendo `doc/index.html` nel browser.
+
+## Cronologia dei commit
+
+- [`343c23e`](https://github.com/LPODISIM2026/Congettura-Goldbach/commit/343c23e) Seconda lezione
+- [`6875e82`](https://github.com/LPODISIM2026/Congettura-Goldbach/commit/6875e82) Primo commit, lezione 2
