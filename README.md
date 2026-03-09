@@ -23,12 +23,12 @@ javac -d bin src/it/univaq/disim/hello/*.java
 ## Per eseguire
 
 ```bash
-java -cp bin it.univaq.disim.hello.RunnerLPO26 <numero>
+javac -cp "LIB/*" -d bin src/it/univaq/disim/hello/*.java
 ```
 
 Esempio:
 ```bash
-java -cp bin it.univaq.disim.hello.RunnerLPO26 100000
+java -cp "bin:LIB/*" it.univaq.disim.hello.RunnerLPO26 -goldbachs -value 10
 ```
 
 ## Per generare la JavaDoc
