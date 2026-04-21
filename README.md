@@ -23,11 +23,21 @@ mvn exec:java -Dexec.args="<parametri da passare>"
 ### Esempio:
 
 #### Primo 
+
 ```bash
 mvn exec:java -Dexec.args="--primo --value 10"
 ```
 
 #### Goldbach
+
 ```bash
 mvn exec:java -Dexec.args="--goldbach --value 10"
 ```
+
+### Per generare la documentazione
+
+```bash
+mvn javadoc:javadoc
+```
+
+La documentazione sarà disponibile aprendo `doc/apidocs/index.html` nel browser.

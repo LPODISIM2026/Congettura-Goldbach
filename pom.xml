@@ -31,6 +31,15 @@
 					<mainClass>it.univaq.disim.hello.RunnerLPO26</mainClass>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.12.0</version>
+				<configuration>
+					<outputDirectory>doc/</outputDirectory>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 </project>
