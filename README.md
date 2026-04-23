@@ -8,46 +8,36 @@ Scrivere un programma che, dato un numero intero n, verifica che la congettura �
 
 ## Per compilare
 
-Dalla cartella del progetto, creare prima la cartella `bin` se non esiste:
+Per compilare il progetto:
 
 ```bash
-mkdir -p bin
-```
-
-Poi compilare tutti i sorgenti:
-
-```bash
-javac -d bin src/it/univaq/disim/hello/*.java
+mvn compile
 ```
 
 ## Per eseguire
 
 ```bash
-javac -cp "LIB/*" -d bin src/it/univaq/disim/hello/*.java
+mvn exec:java -Dexec.args="<parametri da passare>"
 ```
 
-Esempio:
-```bash
-java -cp "bin:LIB/*" it.univaq.disim.hello.RunnerLPO26 -goldbachs -value 10
-```
+### Esempio:
 
-## Per generare la JavaDoc
-
-Dalla cartella del progetto, creare prima la cartella `doc` se non esiste:
+#### Primo 
 
 ```bash
-mkdir -p doc
+mvn exec:java -Dexec.args="--primo --value 10"
 ```
 
-Poi generare la documentazione:
+#### Goldbach
 
 ```bash
-javadoc -d doc -sourcepath src -subpackages it.univaq.disim.hello
+mvn exec:java -Dexec.args="--goldbach --value 10"
 ```
 
-La documentazione sarà disponibile aprendo `doc/index.html` nel browser.
+### Per generare la documentazione
 
-## Cronologia dei commit
+```bash
+mvn javadoc:javadoc
+```
 
-- [`343c23e`](https://github.com/LPODISIM2026/Congettura-Goldbach/commit/343c23e) Seconda lezione
-- [`6875e82`](https://github.com/LPODISIM2026/Congettura-Goldbach/commit/6875e82) Primo commit, lezione 2
+La documentazione sarà disponibile aprendo `doc/apidocs/index.html` nel browser.
